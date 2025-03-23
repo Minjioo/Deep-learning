@@ -9,8 +9,10 @@ ex) 주머니 예시
 -> 주머니가 비면 다시 모든 데이터를 주머니에 넣고 전체 과정 반복 = 1 Epoch
 - 덜 신중하게 방향 설정, GD보다 빠르게 최저점에 도달 가능!
 
+
 - 속도 개선!
 - local minimum으로부터 '탈출할 기회를 제공'
+
 
 ### 2.8 Mini-Batch Gradient Descent
 대규모 데이터에 SGD를 적용할 경우 다량의 나머지 데이터 무시 문제 발생 보완
@@ -20,12 +22,15 @@ ex) 주머니 예시
 GPU 사용 -> 병렬적 연산 가능 -> batch size 키울수록 속도 향상 
 -> but 로컬 미니멈 문제 -> 적절한 batch size를 찾아야 함
 
+
 **Batchsize와 Running rate의 조절**
-Batch size가 커질수록 validation error가 발생한다는 연구결과
+: Batch size가 커질수록 validation error가 발생한다는 연구결과
 > Linear Scaling Rule : Batch size 두배 늘릴 때 Learning Rate도 두배 늘려야
 > Learning Rate Warmup : 0에서 점진적으로 증가시키는 것
 
+
 Learning Rate Scheduling: Cosin Decay, Step Decay
+
 
 > Running Rate: 모델이 학습할 때 파라미터를 얼마나 크게 조정할지 결정하는 값
 > 파라미터: 모델이 학습을 통해 스스로 조정하는 값, (웨이트, 바이어스)
